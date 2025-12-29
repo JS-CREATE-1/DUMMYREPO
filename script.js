@@ -44,7 +44,7 @@ new Chart(userChart,{
     labels:["Customers","Freelancers","Admins"],
     datasets:[{
       data:[
-        users.filter(u=>u.role==="Customer").length,
+        users.filter(u=>u.role==="customer").length,
         users.filter(u=>u.role==="Freelancer").length,
         users.filter(u=>u.role==="Admin").length
       ],
