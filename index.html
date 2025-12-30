@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PROX Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>PROX</h2>
+    <ul>
+      <li class="active">Overview</li>
+      <li>Users</li>
+      <li>Freelancers</li>
+      <li>Jobs</li>
+      <li>Payments</li>
+      <li>Subscriptions</li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <h3>Admin Dashboard</h3>
+    </header>
+
+    <!-- KPI -->
+    <section class="kpis">
+      <div class="kpi"><h4>Total Users</h4><span id="totalUsers"></span></div>
+      <div class="kpi"><h4>Active Freelancers</h4><span id="activeFreelancers"></span></div>
+      <div class="kpi"><h4>Jobs Completed</h4><span id="jobsCompleted"></span></div>
+      <div class="kpi"><h4>Total Revenue (₹)</h4><span id="totalRevenue"></span></div>
+    </section>
+
+    <!-- CHARTS -->
+    <section class="charts">
+      <div class="card">
+        <h4>User Split</h4>
+        <canvas id="userChart"></canvas>
+      </div>
+      <div class="card">
+        <h4>Job Status</h4>
+        <canvas id="jobChart"></canvas>
+      </div>
+      <div class="card">
+        <h4>Revenue</h4>
+        <canvas id="revenueChart"></canvas>
+      </div>
+    </section>
+
+    <!-- TABLES -->
+    <section class="tables">
+
+      <div class="table-card">
+        <h4>Freelancers</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Plan</th>
+              <th>Rating</th>
+              <th>Jobs</th>
+            </tr>
+          </thead>
+          <tbody id="freelancerTable"></tbody>
+        </table>
+      </div>
+
+      <div class="table-card">
+        <h4>Jobs</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody id="jobTable"></tbody>
+        </table>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
